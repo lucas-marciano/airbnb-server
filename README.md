@@ -1,28 +1,51 @@
-# Adonis API application
+# airbnb api rest
 
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
+API build with AdonesJs, white authentication using JWT.
 
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+Models (for now):
 
-## Setup
+1. User
+2. Image
+3. Property
 
-Use the adonis command to install the blueprint
+>If you use Rails or Laravel, the AdonisJs is liked them. Using command line to build the elements of the project.
 
-```bash
-adonis new yardstick --api-only
-```
+## Running
 
-or manually clone the repo and then run `npm install`.
+1. Install the AdonisJS
 
+    ```bash
+    npm i -g @adonisjs/cli
+    ```
 
-### Migrations
+2. Rename the .env_exemple file to .env, and set the database configuration.
 
-Run the following command to run startup migrations.
+3. Run the migrations
+
+    ```bash
+    adonis migration:run
+    ```
+
+4. Run the server
+
+    ```bash
+    adonis serve --dev
+    ```
+
+## Observations
+
+Install the extension, that are compatible with your database.
+
+- MySQL: `npm install mysql`
+- PostgreSQL: `npm install pg`
+- SQLite: `npm install sqlite3`
 
 ```js
 adonis migration:run
+```
+
+## Help
+
+```bash
+adonis --help
 ```
